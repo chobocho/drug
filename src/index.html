@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f3">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'16'%20fill%3D'%23e8f1e9'%2F%3E%3Cg%20transform%3D'rotate(45%2032%2032)'%3E%3Crect%20x%3D'21'%20y%3D'9'%20width%3D'22'%20height%3D'46'%20rx%3D'11'%20fill%3D'white'%20stroke%3D'%23367149'%20stroke-width%3D'3'%2F%3E%3Cpath%20d%3D'M21%2032h22v12a11%2011%200%200%201-22%200z'%20fill%3D'%2361a979'%20stroke%3D'%23367149'%20stroke-width%3D'3'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+  <title>약 체크</title>
+  <style>/* APP_CSS */</style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div><p class="eyebrow">나를 위한 작은 습관</p><h1>💊 약 체크</h1></div>
+      <button id="settings-button" class="icon-button" type="button" aria-label="설정 열기">⚙️ <span>설정</span></button>
+    </header>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <section id="home" aria-labelledby="date-heading">
+      <div class="date-nav">
+        <button id="previous" class="round-button" type="button" aria-label="이전 날짜">‹</button>
+        <div class="date-center"><h2 id="date-heading">오늘</h2><label class="date-label">📅 <input id="date" type="date" aria-label="기록 날짜 선택"></label></div>
+        <button id="next" class="round-button" type="button" aria-label="다음 날짜">›</button>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">MY MEDICATIONS</p><h3>복약 체크</h3></div><span id="progress" class="progress"></span></div>
+      <div id="med-list" class="med-list"></div>
+      <p class="footnote">체크하면 이 기기에 자동 저장돼요.</p>
+    </section>
+    <section id="settings" hidden aria-labelledby="settings-heading">
+      <div class="settings-title"><div><p class="eyebrow">내 복약 관리</p><h2 id="settings-heading">⚙️ 설정</h2></div><button id="close-settings" class="secondary" type="button">완료</button></div>
+      <div class="panel"><h3>🍱 점심약</h3><div class="setting-row"><div><strong>점심약 사용</strong><p>필요할 때 켜서 사용하세요.</p></div><label class="switch"><input id="lunch-enabled" type="checkbox" role="switch" aria-label="점심약 사용"><span></span></label></div></div>
+      <div class="panel"><h3>📋 약과 복용 요일</h3><p class="hint">변경 사항은 오늘부터 적용돼요. 지난 기록은 그대로 유지됩니다.</p><div id="settings-list"></div><form id="add-form" class="add-form"><label for="new-name">새 약 이름</label><div class="add-row"><input id="new-name" type="text" maxlength="50" placeholder="예: 영양제" required><button type="submit" class="primary">＋ 추가</button></div></form></div>
+      <div class="panel"><h3>💾 백업과 복원</h3><p class="hint">약 설정과 기록을 파일로 저장해 다른 기기에서 복원할 수 있어요. 파일에 복약 정보가 포함되니 안전하게 보관하세요.</p><div class="actions"><button id="export" class="secondary" type="button">📤 백업 저장</button><button id="import" class="secondary" type="button">📥 백업 복원</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p class="hint">복원하면 현재 데이터가 백업 내용으로 바뀝니다. 3개월보다 오래된 기록은 삭제돼요.</p></div>
+      <p class="footnote">기록은 이 브라우저에만 저장되며 최근 3개월간 보관됩니다.</p>
+    </section>
+  </main>
+  <script>/* APP_JS */</script>
+</body>
+</html>

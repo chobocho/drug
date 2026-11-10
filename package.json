@@ -1,0 +1,14 @@
+{
+  "name": "medication-check",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.4",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3"
+  }
+}
